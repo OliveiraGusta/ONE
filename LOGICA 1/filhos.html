@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function titulo1(titulo){
+        document.write("<h1>" + titulo +"</h1>");
+    };
+    function paragrafo(paragrafo){
+        document.write("<p>" + paragrafo +"</p>");
+    };
+
+    function geracao(ano_atual, ano_inicial){
+        paragrafo("A media de filhos por geração é de "+ Math.round((ano_atual - ano_inicial)/28)+ " por geração");
+        
+    };
+
+    titulo1("Filhos por Geração")
+    geracao(2022, 1500);
+    
+
+</script>

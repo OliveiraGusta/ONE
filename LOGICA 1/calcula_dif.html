@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function titulo1(titulo) {
+        document.write("<h1>" + titulo + "</h1>")
+
+    }
+    function paragrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>")
+
+    }
+    function mostrarIdades(nome1, nome2, idade1, idade2) {
+        paragrafo("Idade do " + nome1 + " é de: " + idade1 + " anos");
+        paragrafo("Idade do " + nome2 + " é de: " + idade2 + " anos");
+    }
+    function diferencaIdades(idade1, idade2) {
+        diferenca = idade1 - idade2;
+        paragrafo("A diferença de idade é de " + diferenca + " Anos");
+    }
+
+    titulo1("Nossa diferença de idade é:");
+    mostrarIdades("Gustavo", "Carol", 18, 14);
+    diferencaIdades(18, 14);
+
+</script>

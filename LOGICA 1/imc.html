@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(altura, peso) {
+
+        return Math.round(peso / (altura * altura));
+
+    }
+    alert("Olá sou o GSTBot, é um prazer te receber no calculo de IMC");
+    var nome = prompt("Para começarmos informe seu nome");
+    var alturaInformada = prompt("Bacana " + nome + ", agora por favor informe sua altura neste formado (X.XX)");
+    var pesoInformado = prompt("Para finalizarmos o calculo preciso que informe seu peso em KGs");
+
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+
+    if (imc < 18.5) {
+        document.write("<h2>Diagnostico:</h2><h3>CORPO DO SEU MADRUGA!</h3>");
+        mostra("Você esta com o IMC abaixo do recomendado, pela OMS qualquer IMC abaixo 18.5 é considero doente o seu é " + "<b>" + imc + "</b>");
+        mostra(nome + ", Recomendação para você é <a href=\"https://www.google.com/search?client=opera-gx&q=academias+perto+de+mim&sourceid=opera&ie=UTF-8&oe=UTF-8\" target=\"_blank\"> Dieta para ganho de massa e treinos em uma academia<a>");
+    }
+    if (imc > 35) {
+        document.write("<h2>Diagnostico:</h2><h3>DO TAMANHO DO SEU BARRIGA!</h3>");
+        mostra("Você esta acima do recomendado, pela OMS qualquer IMC acima 35 é considero doente e o seu é " + "<b>" + imc + "</b>");
+        mostra(nome + ", Recomendação para você é <a href=\"https://www.google.com/search?client=opera-gx&q=praças+perto+de+mim&sourceid=opera&ie=UTF-8&oe=UTF-8\" target=\"_blank\">Dieta para perda de massa e caminhadas todo dia com progressão gradual de tempo e/ou distancia<a>");
+    }
+    if (imc >= 18.5 && imc <= 35) {
+        document.write("<h2>Diagnostico:</h2><h3>FRANGO, MAS ACEITAVEL!</h3>");
+        mostra("Você esta com o IMC Execelente, pela OMS um IMC entre 18.5 e 35 são os recomendados e o seu é " + "<b>" + imc + "</b>");
+        mostra(nome + ", Continue assim, mas que tal <a href=\"https://www.google.com/search?client=opera-gx&q=academias+perto+de+mim&sourceid=opera&ie=UTF-8&oe=UTF-8\" target=\"_blank\">definir o corpo ou ganhar massa<a>");
+
+    }
+
+</script>
