@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "seu otario";
+    var senhaCadastrada = "321";
+    var chance = 0;
+    var entrou = false;
+
+    while (chance <= 2 && entrou != true) {
+        var loginInformado = prompt("Informe seu login");
+        var senhaInformada = prompt("Informe sua senha");
+
+
+        if (loginCadastrado == loginInformado && senhaCadastrada == senhaInformada) {
+            entrou = true;
+            alert("Bem-vindo ao sistema " + loginInformado);
+            document.write("ENTROU");
+
+        } else {
+            alert("Login inválido. Tente novamente");
+            chance = chance + 1;
+            if (chance == 3) {
+                alert("Suas tentativas acabaram");
+                document.write("FALHA");
+            }
+        }
+    }
+
+
+
+</script>
