@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+
+<head>
+
+</head>
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteio(n) {
+        return Math.round(Math.random() * n);
+
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10);
+    var tentativas = 0;
+
+    alert("Olá sou GSTBOT")
+    while ( tentativas <= 3) {
+        var chute = parseInt(prompt("Tente adivinhar o numero que pensei, digite seu chute de 0 a 10:"));
+
+        if (chute == numeroPensado) {
+            alert("SIM! Impressionante você né, acertou o numero que pensei!");
+            mostra("<h2>PARABÉNS!</h2>");
+            break;
+            
+        } else {
+            alert("BURRO!");
+            tentativas++;
+            if (chute < numeroPensado) {
+                alert("O numero que voce chutou é menor do que o numero que pensei ");
+                
+            }
+            else {
+                alert("O numero que voce chutou é maior do que o numero que pensei ");
+               
+            }
+            
+        }
+    }
+    mostra("O numero pensado foi <b>"+ numeroPensado + "</b>");
+    mostra("Recarregue a pagina e jogue novamente!");
+
+
+</script>
